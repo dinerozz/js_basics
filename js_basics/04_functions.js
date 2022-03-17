@@ -72,3 +72,10 @@ function createMember(name) {
 
 const logWithLastName = createMember('Vasya')
 console.log(logWithLastName('Pupkin'))
+
+// imediatly invoke function expression
+
+const iife = () => {
+    return 1;
+}
+console.log(iife)
