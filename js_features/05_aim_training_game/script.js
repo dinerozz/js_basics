@@ -5,7 +5,7 @@ const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const restart = document.createElement('button')
 
-const circleColors = ['red', 'green', 'blue', 'yellow', 'orange', 'navy']
+const colors = ['#e74c3c', '#8e44ad', '#4E6AE7', '#e67e22', '#2ecc71', '#EB7272', '#8818F2', '#00FF72', '#FC8507']
 
 let time = 0
 let score = 0
@@ -57,15 +57,7 @@ function setTime(value) {
 function finishGame() {
     timeEl.parentNode.classList.add('hide')
     restart.textContent = 'Try again'
-    restart.addEventListener('click', (event) => {
-        event.preventDefault()
-        screens[2].classList.add('down')
-    })
-    board.innerHTML = `
-        <div class="flex-container">
-            <h1 class="score">Your score: <span class="primary">${score}</span></h1>
-            <button class="restart">Try again</button>
-        </div>`
+    board.innerHTML = `<h1 class="score">Your score: <span class="primary">${score}</span></h1>`
 }
 
 function createRandomCircle() {
@@ -74,8 +66,11 @@ function createRandomCircle() {
     const {width, height} = board.getBoundingClientRect()
     const x = getRandomNumber(0, width - size)
     const y = getRandomNumber(0, height - size)
+    const color = getRandomColor()
 
     circle.classList.add('circle')
+    circle.style.background = color
+    circle.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
     circle.style.width = `${size}px`
     circle.style.height = `${size}px`
     circle.style.top = `${y}px`
@@ -88,8 +83,9 @@ function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min)
 }
 
-function getRandomColor(number) {
-
+function getRandomColor() {
+    let index = Math.floor(Math.random() * colors.length)
+    return colors[index]
 }
 
 
