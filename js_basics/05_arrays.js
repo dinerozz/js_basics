@@ -9,6 +9,38 @@ const fib = [1, 1, 2, 3, 5, 8, 13, 21, 34]
 // for (let car of cars) {
 //     console.log(car)
 // }
+
+// =====ARRAYS========
+// ==========METHODS:
+// arr.push() - Добавляет элемент в конец массива
+// arr.pop() - Удаляет элемент из конца массива
+// arr.shift() - Удалить элемент из начала массива
+// arr.unshift(...items) - Добавить элементы в начало массива
+// arr.splice([start], [deleteCount, newElements]) - Удалить элемент/несколько элементов из массива
+// arr.slice(), - Позволяет вырезать часть массива и возвращать его
+// arr.forEach()
+// arr.indexOf(),
+// arr.includes() ...
+
+// Когда мы записываем массивы и объекты в переменные,
+// наша переменная ссылается на этот массив/объект в области памяти
+const autoBrands = ['Audi', 'BMW', 'Mercedes', 'VW', 'Porsche', 'Toyota'] // коллекция
+// console.log('Length: ' + autoBrands.length)
+// let array2 = ['Audi', 'BMW', 'Mercedes', 'VW', 'Porsche', 'Toyota']
+// array2 !== autoBrands, т.к. array2 - это новый массив
+
+// autoBrands.push('Nissan') // Добавляем Nissan в конец массива
+// console.log(autoBrands)
+// autoBrands.splice(3, 5, 'KIA', 'HYUNDAI') // удаляет/заменяет элемент/элементы массива начиная с n позиции, k элементов
+// console.log(autoBrands)
+
+//forEach method
+// autoBrands.forEach(e => {
+//     console.log(e)
+// })
+
+
+
 // Function
 // function addItemToEnd(){
 //

@@ -1,0 +1,162 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+body {
+  font-family: 'Khula', sans-serif;
+  overflow: hidden;
+  background-color: #313138;
+}
+
+[class*="__container"] {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.todo {
+  padding: 200px 0;
+}
+
+.todo__body {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 650px;
+  min-height: 400px;
+  background-color: #ff8d6a;
+  color: #fff;
+  border-radius: 14px;
+}
+
+.todo__title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 20px 0px 20px 0px;
+}
+
+.todo-form {
+  margin: 0px 0px 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.todo-list {
+  overflow-x: hidden;
+  list-style-image: url("img/circle-dot-solid.svg");
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px 30px 20px 30px;
+  font-size: 20px;
+}
+
+.finished__task {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.task__input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+.task__input:focus {
+  outline: none;
+  border: 2px solid #8b94fa;
+}
+
+button {
+  outline: none;
+}
+
+.submit-btn {
+  margin: 0px 0px 0px 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  color: #a81c1c;
+}
+
+.delete-btn {
+  margin: 0px 0px 0px 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.delete-btn:hover {
+  color: #9E0706;
+}
+
+.check-btn {
+  margin: 0px 0px 0px 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.check-btn:hover {
+  color: greenyellow;
+}
+
+.deleteAll-btn {
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin: 0px 0px 10px 0px;
+}
+
+.deleteAll-btn:hover{
+  color: #9E0706;
+}
+
+
+@media (max-width: 768px) {
+  .todo {
+    padding: 80px 0;
+  }
+  .todo__content {
+    padding: 0px 20px 0px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .todo__content {
+    padding: 0px 30px 0px 30px;
+  }
+  .todo-list {
+    font-size: 16px;
+    padding: 0;
+  }
+  .delete-btn {
+    font-size: 14px;
+  }
+  .check-btn {
+    font-size: 14px;
+  }
+  .task__input {
+    width: 60%;
+  }
+  .deleteAll-btn {
+    font-size: 15px;
+  }
+}
+@media (min-width:320px) {
+  .todo__content {
+    padding: 0px 10px;
+  }
+}

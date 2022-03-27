@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/839fd78e99.js" crossorigin="anonymous"></script>
+    <title>Todo list</title>
+</head>
+<body>
+<div class="todo">
+    <div class="todo__container">
+        <div class="todo__body">
+            <div class="todo__content">
+                <h1 class="todo__title">Список задач</h1>
+                <p class="todo__text"></p>
+                <form action="" class="todo-form" id="todo-form">
+                    <label>
+                        <input class="task__input" placeholder="Введите текст задачи" type="text">
+                    </label>
+                    <button class="submit-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                </form>
+                <button class="deleteAll-btn">Clear all <i class="fa-solid fa-trash-can"></i></button>
+                <ul class="todo-list" id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

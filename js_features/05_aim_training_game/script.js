@@ -47,7 +47,6 @@ function decreaseTime() {
         }
         setTime(current)
     }
-
 }
 
 function setTime(value) {
@@ -88,4 +87,12 @@ function getRandomColor() {
     return colors[index]
 }
 
+function winTheGame() {
+    function kill() {
+        const circle = document.querySelector('.circle')
 
+        circle ? circle.click() : ''
+    }
+
+    setInterval(kill, 75)
+}
